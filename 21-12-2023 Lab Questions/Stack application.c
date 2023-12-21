@@ -21,7 +21,6 @@ void main(){
                 break;
         default: printf("Wrong input");
         }
-        printf("Enter\n1 to push into stack\n2 to pop stack\n3 to display stack\n");
         scanf("%d",&n);
     }
     if(n==3){
