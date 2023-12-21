@@ -29,7 +29,7 @@ void main(){
     }
 }
 void push(int a){
-    if(top>10){
+    if(top>max-1){
         printf("Stack overflow");
         exit(0);
     }
