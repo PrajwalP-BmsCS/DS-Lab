@@ -19,6 +19,7 @@ void main(){
         case 2: a=pop();
                 printf("Popped element: %d\n",a);
                 break;
+        default: printf("Wrong input");
         }
         printf("Enter\n1 to push into stack\n2 to pop stack\n3 to display stack\n");
         scanf("%d",&n);
