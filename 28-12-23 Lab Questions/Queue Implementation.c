@@ -35,6 +35,7 @@ void main(){
 void enqueue(int a){
     if(rear==max-1){
         printf("Queue overflow");
+        
     }
     rear+=1;
     queue[rear]=a;
@@ -43,9 +44,12 @@ void enqueue(int a){
 int dequeue(){
     if(rear==-1 || front==rear){
         printf("Queue underflow");
+        exit(0); 
     }
-    front+=1;
-    return queue[front];
+    else{
+        front+=1;
+        return queue[front];
+    }
 }
 
 void display(){
