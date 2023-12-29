@@ -47,3 +47,14 @@ int pop(){
 
     }
 }
+
+float compute(int a,int b,char c){
+    if(c=='+')
+        return a+b;
+    else if(c=='*')
+        return a*b;
+    else if(c=='-')
+        return b-a;
+    else if(c=='/')
+        return b/a;
+}
