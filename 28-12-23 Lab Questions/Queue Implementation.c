@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #define max 20
 int queue[max];
 int front=-1, rear=-1;
