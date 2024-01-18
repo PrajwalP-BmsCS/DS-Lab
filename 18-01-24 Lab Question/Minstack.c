@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define max 4
+#define max 1000
 
 typedef struct {
     int top;
