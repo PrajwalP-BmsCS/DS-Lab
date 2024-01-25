@@ -57,7 +57,6 @@ struct node* sort(struct node *head) {
         count++;
         ptr1=ptr1->next;
     }
-    ptr1=head;
     while(--count){
         ptr1=head;
         while(ptr1->next!=NULL){
