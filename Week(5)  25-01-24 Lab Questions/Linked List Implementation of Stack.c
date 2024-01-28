@@ -7,7 +7,7 @@ struct Node{
 
 struct Node *top=NULL;
 
-int pop(){
+void pop(){
     if(top==NULL){
         printf("Empty stack");
     }
