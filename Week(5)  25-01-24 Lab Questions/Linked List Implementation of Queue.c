@@ -9,7 +9,7 @@ Node *head=NULL;
 
 void enqueue(){
     Node *ptr=(Node*)malloc(sizeof(Node));
-    printf("Enter element to enque: ");
+    printf("Enter element to enqueue: ");
     int num;
     scanf("%d",&num);
     ptr->val=num;
