@@ -103,6 +103,7 @@ void main(){
    int choice;
     printf("1. To insert into left of Doubly Linked List\n");
     printf("2. To Delete from any point of Doubly Linked List\n");
+    printf("3. To display list");
     printf("Enter choice: ");
     while (1) {
         scanf("%d", &choice);
