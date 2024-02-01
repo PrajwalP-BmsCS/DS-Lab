@@ -9,30 +9,57 @@ typedef struct Node{
 Node *head=NULL;
 
 void insert(){
+    int num,pos;
     printf("Enter value : ");
-    Node *ptr=(Node*)malloc(sizeof(Node));
-    int num;
     scanf("%d",&num);
+    printf("Enter node to insert left of: ");
+    scanf("%d",&pos);
+
+    Node *ptr=(Node*)malloc(sizeof(Node));
     ptr->val=num;
+
+    if(pos==0){
     ptr->next=head;
     ptr->prev=NULL;
-    if (head != NULL) {
-        head->prev = ptr;
-    }
+        if (head != NULL){
+            head->prev = ptr;
+        }
     head=ptr;
-} 
+
+    }
+    Node *ptr1=head;
+
+    if(pos!=0){
+        for(int i=0;i<pos;i++){
+            ptr1=ptr1->next;
+        }
+        ptr->next=ptr1;
+        ptr->prev=ptr1->prev;
+        ptr1->prev->next=ptr;
+        ptr1->prev=ptr;
+
+
+    }
+}
 
 void delete(){
-    printf("Enter node to delete: ");
-    int loc,len=1;
-    scanf("%d",&loc);
+    printf("Enter value to delete: ");
+    int loc=-1,len=1,val;
+    scanf("%d",&val);
     Node *ptr=head,*ptr2,*ptr3;
     while(ptr->next!=NULL){
         len++;
         ptr=ptr->next;
     }
-    if(loc>len){
-        printf("Delete index out of bounds %d\n",len);
+    ptr=head;
+    for(int i=0;i<len;i++){
+        if(ptr->val=val){
+            loc=i;
+        }
+    }
+
+    if(loc==-1){
+        printf("Delete element not in list\n");
         return;
     }
     if(loc==0){
@@ -66,7 +93,7 @@ void delete(){
 void display(){
     Node *ptr=head;
     while(ptr!=NULL){
-        printf("%d->",ptr->val);
+        printf("%d<->",ptr->val);
         ptr=ptr->next;
     }
     printf("NULL\n");
