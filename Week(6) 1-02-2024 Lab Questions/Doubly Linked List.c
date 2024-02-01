@@ -53,11 +53,11 @@ void delete(){
     }
     ptr=head;
     for(int i=0;i<len;i++){
-        if(ptr->val=val){
+        if(ptr->val==val){
             loc=i;
         }
+        ptr=ptr->next;
     }
-
     if(loc==-1){
         printf("Delete element not in list\n");
         return;
@@ -80,7 +80,8 @@ void delete(){
         return;
     }
     ptr=head;
-    for(int i=0;i<loc-1;i++){
+    loc++;
+    while(--loc){
         ptr2=ptr;
         ptr=ptr->next;
     }
@@ -102,8 +103,8 @@ void display(){
 void main(){
    int choice;
     printf("1. To insert into left of Doubly Linked List\n");
-    printf("2. To Delete any value of Doubly Linked List\n");
-    printf("3. To display list");
+    printf("2. To Delete from any value of Doubly Linked List\n");
+    printf("3. To display list\n");
     printf("Enter choice: ");
     while (1) {
         scanf("%d", &choice);
@@ -119,7 +120,7 @@ void main(){
                 break;
             default:
                 printf("Exiting the program");
-                return;
+                return 0;
         }
         printf("Enter choice: ");
     }
