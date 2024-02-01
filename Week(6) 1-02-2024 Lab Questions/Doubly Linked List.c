@@ -46,7 +46,7 @@ void delete(){
     printf("Enter value to delete: ");
     int loc=-1,len=1,val;
     scanf("%d",&val);
-    Node *ptr=head,*ptr2,*ptr3;
+    Node *ptr=head,*ptr2;
     while(ptr->next!=NULL){
         len++;
         ptr=ptr->next;
